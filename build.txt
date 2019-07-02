@@ -1,0 +1,3 @@
+author = caiodesign
+version = 0.1
+displayName = TRPG
