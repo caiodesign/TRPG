@@ -33,10 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Buffs\powerArmorBuff.cs" />
-    <Compile Include="Items\Armor\PowerArmorFrameItem.cs" />
+    <Compile Include="Buffs\Swordsman\SwordsmanBuffTierI.cs" />
+    <Compile Include="Items\Swordsman\SwordsmanAmuletTierI.cs" />
+    <Compile Include="ModPlayers\SwordsmanModPlayer.cs" />
     <Compile Include="NPCs\MorpheusNPC.cs" />
-    <Compile Include="Races.cs" />
     <Compile Include="Items\Broadsword.cs" />
     <Compile Include="TRPG.cs" />
   </ItemGroup>
@@ -62,7 +62,12 @@
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
