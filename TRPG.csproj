@@ -33,14 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Buffs\Swordsman\Class1.cs" />
     <Compile Include="Buffs\Swordsman\SwordsmanBuffTierI.cs" />
-    <Compile Include="Items\Swordsman\Class1.cs" />
+    <Compile Include="Buffs\Swordsman\SwordsmanBuffTierII.cs" />
     <Compile Include="Items\Swordsman\SwordsmanAmuletTierI.cs" />
+    <Compile Include="Items\Swordsman\SwordsmanAmuletTierII.cs" />
     <Compile Include="ModPlayers\SwordsmanModPlayer.cs" />
     <Compile Include="NPCs\MorpheusNPC.cs" />
     <Compile Include="Items\Broadsword.cs" />
     <Compile Include="TRPG.cs" />
+    <Compile Include="Items\Zeny.cs" />
+    <Compile Include="ZenyCurrencyData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">

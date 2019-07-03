@@ -89,11 +89,14 @@ namespace TRPG.NPCs
 
         public override void SetupShop(Chest shop, ref int nextSlot)       //Allows you to add items to this town NPC's shop. Add an item by setting the defaults of shop.item[nextSlot] then incrementing nextSlot.
         {
-            shop.item[nextSlot].SetDefaults(ItemID.IronskinPotion);
+            shop.item[nextSlot].SetDefaults(mod.ItemType("SwordsmanAmuletTierI"));
+            shop.item[nextSlot].shopCustomPrice = new int?(1);
+            shop.item[nextSlot].shopSpecialCurrency = TRPG.ZenyID;
             nextSlot++;
-            shop.item[nextSlot].SetDefaults(mod.ItemType("Broadsword"));  //this is an example of how to add a modded item
+            shop.item[nextSlot].SetDefaults(mod.ItemType("SwordsmanAmuletTierII"));
+            shop.item[nextSlot].shopCustomPrice = new int?(3);
+            shop.item[nextSlot].shopSpecialCurrency = TRPG.ZenyID;
             nextSlot++;
-
         }
 
 

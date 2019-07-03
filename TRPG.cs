@@ -1,11 +1,25 @@
+﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.GameContent.UI;
 
 namespace TRPG
 {
-	class TRPG : Mod
-	{
-		public TRPG()
-		{
-		}
+    public class TRPG : Mod
+    {
+        public static int ZenyID;
+
+        public TRPG()
+        {
+            Properties = new ModProperties()
+            {
+                Autoload = true,
+            };
+        }
+
+        public override void Load()
+        {
+            ZenyID = CustomCurrencyManager.RegisterCurrency(new ZenyCurrency(ItemType("Zeny"), 999L));
+        }
     }
+   
 }

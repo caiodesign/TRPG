@@ -25,7 +25,7 @@ namespace TRPG.Items.Swordsman
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<SwordsmanModPlayer>().isSwordsmanI = true;
+            player.GetModPlayer<SwordsmanModPlayer>().IsSwordsman(1);
         }
     }
 }

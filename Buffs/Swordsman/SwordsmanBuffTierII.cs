@@ -9,7 +9,7 @@ namespace TRPG.Buffs.Swordsman
 
         public string description = String.Join(
             Environment.NewLine,
-            "You are a swordsman of Terraria!",
+            "You are a swordsman II of Terraria!",
             "+30% damage using melee weapons.",
             "+7% movement speed.",
             "+7 points of defense."
