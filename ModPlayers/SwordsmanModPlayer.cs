@@ -6,11 +6,13 @@ namespace TRPG.ModPlayers
 {
     public class SwordsmanModPlayer : ModPlayer
     {
-        public bool IsSwordsman;
+        public bool isSwordsmanI;
+        public bool isSwordsmanII;
 
         public override void ResetEffects()
         {
-            IsSwordsman = false;
+            isSwordsmanI = false;
+            isSwordsmanII = false;
         }
 
         public override void UpdateEquips(ref bool wallSpeedBuff, ref bool tileSpeedBuff, ref bool tileRangeBuff)
@@ -18,9 +20,12 @@ namespace TRPG.ModPlayers
             // Make sure this condition is the same as the condition in the Buff to remove itself.
             // We do this here instead of in ModItem.UpdateAccessory in case we want future upgraded
             // items to set powerArmorAcessory
-            if (IsSwordsman)
+            if (isSwordsmanI)
             {
                 player.AddBuff(mod.BuffType<Buffs.Swordsman.SwordsmanBuffTierI>(), 60, true);
+            } else if (isSwordsmanII)
+            {
+                player.AddBuff(mod.BuffType<Buffs.Swordsman.SwordsmanBuffTierII>(), 60, true);
             }
         }
     }

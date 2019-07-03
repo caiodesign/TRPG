@@ -4,13 +4,13 @@ using TRPG.ModPlayers;
 
 namespace TRPG.Items.Swordsman
 {
-    public class SwordsmanAmuletTierI : ModItem
+    public class SwordsmanAmuletTierII : ModItem
     {
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Swordsman amulet I");
-            Tooltip.SetDefault("This is a novice swordsman amulet, an accessory item.");
+            DisplayName.SetDefault("Swordsman amulet II");
+            Tooltip.SetDefault("This is a swordsman amulet, an accessory item.");
         }
 
         public override void SetDefaults()
@@ -25,7 +25,7 @@ namespace TRPG.Items.Swordsman
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<SwordsmanModPlayer>().isSwordsmanI = true;
+            player.GetModPlayer<SwordsmanModPlayer>().isSwordsmanII = true;
         }
     }
 }

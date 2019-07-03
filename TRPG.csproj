@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Buffs\Swordsman\Class1.cs" />
     <Compile Include="Buffs\Swordsman\SwordsmanBuffTierI.cs" />
+    <Compile Include="Items\Swordsman\Class1.cs" />
     <Compile Include="Items\Swordsman\SwordsmanAmuletTierI.cs" />
     <Compile Include="ModPlayers\SwordsmanModPlayer.cs" />
     <Compile Include="NPCs\MorpheusNPC.cs" />
