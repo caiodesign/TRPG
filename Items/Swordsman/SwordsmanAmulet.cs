@@ -1,16 +1,18 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using TRPG.ModPlayers;
+using TRPG.Buffs.Swordsman;
 
 namespace TRPG.Items.Swordsman
 {
-    public class SwordsmanAmuletTierII : ModItem
+    public class SwordsmanAmulet : ModItem
     {
+        readonly SwordsmanBuff buff = new SwordsmanBuff();
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Swordsman amulet II");
-            Tooltip.SetDefault("This is a swordsman amulet, an accessory item.");
+            DisplayName.SetDefault("[S-I] Swordsman amulet");
+            Tooltip.SetDefault(buff.description);
         }
 
         public override void SetDefaults()
@@ -19,13 +21,13 @@ namespace TRPG.Items.Swordsman
             item.height = 32;
             item.maxStack = 1;
             item.value = 1000000;
-            item.rare = 10;
+            item.rare = 5;
             item.accessory = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<SwordsmanModPlayer>().IsSwordsman(2);
+            player.GetModPlayer<SwordsmanModPlayer>().IsSwordsman(1);
         }
     }
 }

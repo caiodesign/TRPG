@@ -1,16 +1,21 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using TRPG.ModPlayers;
+using TRPG.Buffs.Swordsman;
 
 namespace TRPG.Items.Swordsman
 {
-    public class SwordsmanAmuletTierI : ModItem
+    public class KnightAmulet : ModItem
     {
+        readonly KnightBuff buff = new KnightBuff();
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Swordsman amulet I");
-            Tooltip.SetDefault("This is a novice swordsman amulet, an accessory item.");
+            DisplayName.SetDefault("[S-II] Knight Amulet");
+            Tooltip.SetDefault(Utils.GetDescription(
+                buff.description,
+                "The Knight class is the primary second job for the Swordman class."
+            ));
         }
 
         public override void SetDefaults()
@@ -19,13 +24,13 @@ namespace TRPG.Items.Swordsman
             item.height = 32;
             item.maxStack = 1;
             item.value = 1000000;
-            item.rare = 10;
+            item.rare = 8;
             item.accessory = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<SwordsmanModPlayer>().IsSwordsman(1);
+            player.GetModPlayer<SwordsmanModPlayer>().IsSwordsman(2);
         }
     }
 }

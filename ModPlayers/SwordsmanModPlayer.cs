@@ -25,12 +25,12 @@ namespace TRPG.ModPlayers
             // items to set powerArmorAcessory
             if (tier == 1)
             {
-                player.AddBuff(mod.BuffType<Buffs.Swordsman.SwordsmanBuffTierI>(), 60, true);
+                player.AddBuff(mod.BuffType<Buffs.Swordsman.SwordsmanBuff>(), 60, true);
             }
 
             if (tier == 2)
             {
-                player.AddBuff(mod.BuffType<Buffs.Swordsman.SwordsmanBuffTierII>(), 60, true);
+                player.AddBuff(mod.BuffType<Buffs.Swordsman.KnightBuff>(), 60, true);
             }
         }
     }

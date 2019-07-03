@@ -4,11 +4,10 @@ using Terraria.ModLoader;
 
 namespace TRPG.Buffs.Swordsman
 {
-    public class SwordsmanBuffTierI : ModBuff
+    public class SwordsmanBuff : ModBuff
     {
-        string description = String.Join(
+        public string description = String.Join(
             Environment.NewLine,
-            "You are a novice swordsman of Terraria!",
             "+20% damage using melee weapons.",
             "+5% movement speed.",
             "+5 points of defense."
@@ -16,8 +15,8 @@ namespace TRPG.Buffs.Swordsman
 
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Novice Swordsman");
-            Description.SetDefault(description);
+            DisplayName.SetDefault("Swordsman");
+            Description.SetDefault(Utils.GetDescription(description, "You are a swordsman of Terraria!"));
             Main.debuff[Type] = true;
             Main.buffNoSave[Type] = true;
             Main.buffNoTimeDisplay[Type] = true;

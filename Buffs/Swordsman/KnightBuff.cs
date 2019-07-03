@@ -4,12 +4,10 @@ using Terraria.ModLoader;
 
 namespace TRPG.Buffs.Swordsman
 {
-    public class SwordsmanBuffTierII : ModBuff
+    public class KnightBuff : ModBuff
     {
-
         public string description = String.Join(
             Environment.NewLine,
-            "You are a swordsman II of Terraria!",
             "+30% damage using melee weapons.",
             "+7% movement speed.",
             "+7 points of defense."
@@ -17,8 +15,8 @@ namespace TRPG.Buffs.Swordsman
 
         public override void SetDefaults()
         {
-            DisplayName.SetDefault("Swordsman II");
-            Description.SetDefault(description);
+            DisplayName.SetDefault("[S-II] Knight");
+            Description.SetDefault(Utils.GetDescription(description, "You are a knight of Terraria!"));
             Main.debuff[Type] = true;
             Main.buffNoSave[Type] = true;
             Main.buffNoTimeDisplay[Type] = true;
