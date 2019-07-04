@@ -35,7 +35,8 @@
   <ItemGroup>
     <Compile Include="Buffs\Swordsman\KnightBuff.cs" />
     <Compile Include="Buffs\Swordsman\SwordsmanBuff.cs" />
-    <Compile Include="Items\OrideconOre.cs" />
+    <Compile Include="Items\Oridecon\OrideconBar.cs" />
+    <Compile Include="Items\Oridecon\OrideconOre.cs" />
     <Compile Include="Items\Swordsman\KnightAmulet.cs" />
     <Compile Include="Items\Swordsman\SwordsmanAmulet.cs" />
     <Compile Include="ModPlayers\SwordsmanModPlayer.cs" />
@@ -44,6 +45,7 @@
     <Compile Include="Tiles\OrideconOreTile.cs" />
     <Compile Include="TRPG.cs" />
     <Compile Include="Items\Zeny.cs" />
+    <Compile Include="TRPGWorld.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="ZenyCurrency.cs" />
   </ItemGroup>
