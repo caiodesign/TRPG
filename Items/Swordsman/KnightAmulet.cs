@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using TRPG.ModPlayers;
 using TRPG.Buffs.Swordsman;
+using Terraria.ID;
 
 namespace TRPG.Items.Swordsman
 {
@@ -31,6 +32,16 @@ namespace TRPG.Items.Swordsman
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<SwordsmanModPlayer>().IsSwordsman(2);
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddTile(TileID.Anvils);
+            recipe.AddIngredient(mod.ItemType("SwordsmanAmulet"), 1);
+            recipe.AddIngredient(mod.ItemType("OrideconBar"), 10);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }
