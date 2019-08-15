@@ -8,8 +8,8 @@ namespace TRPG.Buffs.Swordsman
     {
         public string description = String.Join(
             Environment.NewLine,
-            "+15% damage using melee weapons.",
-            "+10% melee atack speed",
+            "+7% damage using melee weapons.",
+            "+5% melee atack speed",
             "+7% movement speed.",
             "+7 points of defense."
         );
@@ -26,8 +26,8 @@ namespace TRPG.Buffs.Swordsman
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.meleeDamage += 0.15f; //adds 30% melee damage
-            player.meleeSpeed += 0.1f; //adds 10% speed attack
+            player.meleeDamage += 0.07f; //adds 7% melee damage
+            player.meleeSpeed += 0.1f; //adds 7% speed attack
             player.statDefense += 7;
             player.moveSpeed += 0.07f; //adds 7% movement speed
         }

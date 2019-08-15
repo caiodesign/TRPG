@@ -25,7 +25,7 @@ namespace TRPG.Buffs.Swordsman
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.meleeDamage += 0.05f; //adds 20% more melee damage
+            player.meleeDamage += 0.05f; //adds 5% more melee damage
             player.statDefense += 5;
             player.moveSpeed += 0.05f; //adds 5% movement speed
         }

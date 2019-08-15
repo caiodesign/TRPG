@@ -32,6 +32,11 @@ namespace TRPG.ModPlayers
             {
                 player.AddBuff(mod.BuffType<Buffs.Swordsman.KnightBuff>(), 60, true);
             }
+
+            if (tier == 3)
+            {
+                player.AddBuff(mod.BuffType<Buffs.Swordsman.LordKnightBuff>(), 60, true);
+            }
         }
     }
 
